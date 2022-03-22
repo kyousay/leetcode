@@ -24,3 +24,4 @@ var increasingBST = function(root) {
 
 // Runtime: 88 ms, faster than 47.35% of JavaScript online submissions for Increasing Order Search Tree.
 // Memory Usage: 42.9 MB, less than 47.35% of JavaScript online submissions for Increasing Order Search Tree.
+
