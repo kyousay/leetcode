@@ -33,6 +33,33 @@
 // Runtime: 67 ms, faster than 75.33% of JavaScript online submissions for Middle of the Linked List.
 // Memory Usage: 42.3 MB, less than 22.66% of JavaScript online submissions for Middle of the Linked List.
 
+// my answer2
+//  currに参照を渡して、nextを再帰的に設定している
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+ var middleNode = function(head) {
+    const arr = [];
+    const recursive = (root) => {
+        if(!root) return;
+        arr.push(root.val);
+        recursive(root.next);        
+    }
+    recursive(head);
+    const half = Math.floor(arr.length / 2);
+    const middleNode = new ListNode();
+    let curr = middleNode;
+    for(let i = half; i < arr.length; i++) {
+        curr.next = new ListNode(arr[i]);
+        curr = curr.next;
+    }
+    return middleNode.next;
+};
+
+// Runtime: 69 ms, faster than 71.54% of JavaScript online submissions for Middle of the Linked List.
+// Memory Usage: 41.9 MB, less than 71.81% of JavaScript online submissions for Middle of the Linked List.
+
 // another answer1
 // 1.ひとまず長さを数える
 // 2.currentの再代入で調整する
@@ -64,6 +91,8 @@ const middleNode = head => {
 // Memory Usage: 42.5 MB, less than 10.78% of JavaScript online submissions for Middle of the Linked List.
 
 // another answer2
+// runnerを2倍の速さで進めておいて値がないところでreturnすれば、ちょうど半分を返すことができる
+// 考えたやつ頭よすぎ
 const middleNode = head => {
 	let current = head;
 	let runner = head;
