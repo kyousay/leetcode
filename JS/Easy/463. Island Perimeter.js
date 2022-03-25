@@ -21,3 +21,5 @@
 
 // Runtime: 264 ms, faster than 34.32% of JavaScript online submissions for Island Perimeter.
 // Memory Usage: 50.4 MB, less than 67.49% of JavaScript online submissions for Island Perimeter.
+
+// 配列の添字を-1にしてもundefinedになることを初めて知った。
