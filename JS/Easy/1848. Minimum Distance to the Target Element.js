@@ -18,5 +18,3 @@
 
 // Runtime: 73 ms, faster than 68.57% of JavaScript online submissions for Minimum Distance to the Target Element.
 // Memory Usage: 42.5 MB, less than 50.00% of JavaScript online submissions for Minimum Distance to the Target Element.
-
-// another answer
